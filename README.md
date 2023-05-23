@@ -1,4 +1,4 @@
-# My Paper Title
+# SMPL-IKS: An Inverse Kinematic Solver for 3D Human Body Recovery
 
 This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
 
