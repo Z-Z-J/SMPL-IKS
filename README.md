@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Preparing Data and Rre-trained model
 1. Download train/test datasets and pretrained model.
-   * Download the SMPL model
+   * Download our pretrained model (with predicted camera) from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
 
 2. You need to follow directory structure of the `data` as below.
 ```
@@ -39,7 +39,7 @@ pip install -r requirements.txt
     `-- |-- arm
         `-- |-- model_best.pth.tar
 ```
-3. You need to modify the ROOT_PATH.
+3. You need to modify the ROOT_PATH:
 ```setup
 #1. cd SMPLIKS
 #2. vim lib/core/config.py
