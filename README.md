@@ -17,7 +17,10 @@ pip install -r requirements.txt
 
 ## Preparing Data and Rre-trained model
 1. Download train/test datasets and pretrained model.
-   * Download our pretrained model (with predicted camera) from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
+   * Download our train/test data from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing) 
+   * Download our model data from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
+   * Download our pretrained model from [Google Drive](https://drive.google.com/drive/folders/1YFg712Dtl0fAdg3RzIciuNO9gPxudVbJ?usp=sharing)
+   
 
 2. You need to follow directory structure of the `data` as below.
 ```
