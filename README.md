@@ -17,20 +17,20 @@ pip install -r requirements.txt
 
 ## Preparing Data and Rre-trained model
 1. Download train/test datasets and pretrained model.
-   * Download our train/test data from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing) 
-   * Download our model data from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
+   * Download our smpliks_db from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing) 
+   * Download our smpliks_data from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
    * Download our pretrained model from [Google Drive](https://drive.google.com/drive/folders/1YFg712Dtl0fAdg3RzIciuNO9gPxudVbJ?usp=sharing)
    
 
 2. You need to follow directory structure of the `data` as below.
 ```
 |-- data
-`-- |-- smplik_db
+`-- |-- smpliks_db
     `-- |-- amass_train_db.pt
         `-- amss_test_db.pt
         `-- 3dpw_test_db.pt
         `-- agora_test_db.pt
-`-- |-- smplik_data
+`-- |-- smpliks_data
     `-- |-- SMPL_NEUTRAL.pkl
         `-- smpl_kid_template.npy
         `-- skeleton_2_beta.npz
