@@ -7,7 +7,7 @@ This repository is the official implementation of [SMPL-IKS: An Inverse Kinemati
 To install requirements:
 
 ```setup
-# 1. Create a conda virtual environment.
+#1. Create a conda virtual environment.
 conda create -n smpliks python=3.6.10
 conda activate smpliks
 
