@@ -65,11 +65,10 @@ python eval_analyik.py --cfg config/config_eval.yaml
 
 Our model achieves the following performance:
 
-| Methods            | AMASS                | 3DPW                 | AGORA              |
-| -------------------|----------------------| ---------------------| -------------------|
-| -------------------| MPBE   MPJPE   MPVE  | MPBE    MPJPE   MPVE | MPBE   MPJPE   MPVE|
-| SI+APR+AnalyIK     | 0.2     0.3    10.9  |  0.0     0.2    14.2 | 0.1     0.2    23.4|          |  
-| SI+APR+HybrIK      | 0.2---  1.0--- 6.6   |  0.0     0.3    10.5 | 0.1     0.7    19.2|  
+| Methods            |MPBE(AMASS)|MPJPE(AMASS)|MPVE(AMASS)|MPBE(3DPW)|MPJPE(3DPW)|MPVE(3DPW)|MPBE(AGORA)|MPJPE(AGORA)|MPVE(AGORA)|
+| -------------------|-----------|------------|-----------|----------|-----------|----------|-----------|------------|-----------|
+| SI+APR+AnalyIK     |   0.2     |     0.3    |     10.9  |   0.0    |    0.2    |   14.2   |    0.1    |     0.2    |   23.4    |            
+| SI+APR+HybrIK      |   0.2     |     1.0    |     6.6   |   0.0    |    0.3    |   10.5   |    0.1    |     0.7    |   19.2    |  
 
 ## License
 By downloading and using this code you agree to the terms in the [LICENSE](LICENSE). Third-party datasets and software are subject to their respective licenses.
