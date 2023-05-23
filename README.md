@@ -39,8 +39,12 @@ pip install -r requirements.txt
     `-- |-- arm
         `-- |-- model_best.pth.tar
 ```
-3. You need to 
-
+3. You need to modify the ROOT_PATH.
+```setup
+#1. cd SMPLIKS
+#2. vim lib/core/config.py
+#3. you should modify the ROOT_PATH = <YOU PATH>
+```
 
 ## Training
 
