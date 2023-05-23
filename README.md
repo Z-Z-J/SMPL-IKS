@@ -71,6 +71,6 @@ Our model achieves the following performance:
 | SI+APR+AnalyIK     | 0.2     0.3    10.9  |  0.0     0.2    14.2 | 0.1     0.2    23.4|          |  
 | SI+APR+HybrIK      | 0.2---  1.0--- 6.6   |  0.0     0.3    10.5 | 0.1     0.7    19.2|  
 
-## Contributing
+## License
+By downloading and using this code you agree to the terms in the [LICENSE](LICENSE). Third-party datasets and software are subject to their respective licenses.
 
->📋  Pick a licence and describe how to contribute to your code repository. 
