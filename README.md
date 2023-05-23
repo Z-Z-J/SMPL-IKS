@@ -16,12 +16,11 @@ pip install -r requirements.txt
 ```
 
 ## Preparing Data and Rre-trained model
-1. Download train/test datasets and pretrained model.
+1. Download the required data.
    * Download our smpliks_db from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing) 
    * Download our smpliks_data from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
    * Download our pretrained model from [Google Drive](https://drive.google.com/drive/folders/1YFg712Dtl0fAdg3RzIciuNO9gPxudVbJ?usp=sharing)
    
-
 2. You need to follow directory structure of the `data` as below.
 ```
 |-- data
@@ -33,7 +32,7 @@ pip install -r requirements.txt
 `-- |-- smpliks_data
     `-- |-- SMPL_NEUTRAL.pkl
         `-- smpl_kid_template.npy
-        `-- skeleton_2_beta.npz
+        `-- skeleton_2_beta_kid.npz
 `-- |-- pretrained_model
     `-- |-- spine
         `-- |-- model_best.pth.tar
@@ -44,9 +43,9 @@ pip install -r requirements.txt
 ```
 3. You need to modify the ROOT_PATH:
 ```setup
-#1. cd SMPLIKS
-#2. vim lib/core/config.py
-#3. you should modify the ROOT_PATH = <YOU PATH>
+#1. vim lib/core/config.py
+
+#2. you should modify the ROOT_PATH = <Your path>
 ```
 
 ## Training
@@ -64,9 +63,16 @@ python train_pan.py --cfg configs/config_spine.yaml
 To evaluate our SI+APR+AnalyIK or SI+APR+HybrIK, run:
 
 ```eval
-python eval_hybrik.py --cfg configs/config_eval.yaml
-python eval_analyik.py --cfg config/config_eval.yaml
+python eval_si_apr_hybrik.py --cfg configs/config_eval.yaml
+python eval_si_apr_analyik.py --cfg config/config_eval.yaml
 ```
+You can evaluate on different datasets by modifying:
+
+```eval
+#1. vim configs/config_eval.yaml
+#2. you should modify the DATASET_EVAL: 'AGORA' or 'AMASS' or 'ThreeDPW'
+```
+
 
 ## Results
 
