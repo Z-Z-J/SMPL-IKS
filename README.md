@@ -67,8 +67,8 @@ Our model achieves the following performance:
 
 | Methods            |MPBE(AMASS)|MPJPE(AMASS)|MPVE(AMASS)|MPBE(3DPW)|MPJPE(3DPW)|MPVE(3DPW)|MPBE(AGORA)|MPJPE(AGORA)|MPVE(AGORA)|
 | -------------------|-----------|------------|-----------|----------|-----------|----------|-----------|------------|-----------|
-| SI+APR+AnalyIK     |   0.2     |     0.3    |     10.9  |   0.0    |    0.2    |   14.2   |    0.1    |     0.2    |   23.4    |            
-| SI+APR+HybrIK      |   0.2     |     1.0    |     6.6   |   0.0    |    0.3    |   10.5   |    0.1    |     0.7    |   19.2    |  
+| SI+APR+AnalyIK     |   0.2mm   |     0.3mm  |    10.9mm |   0.0mm  |    0.2mm  |   14.2mm |    0.1mm  |     0.2mm  |   23.4mm  |            
+| SI+APR+HybrIK      |   0.2mm   |     1.0mm  |    6.6mm  |   0.0mm  |    0.3mm  |   10.5mm |    0.1mm  |     0.7mm  |   19.2mm  |  
 
 ## License
 By downloading and using this code you agree to the terms in the [LICENSE](LICENSE). Third-party datasets and software are subject to their respective licenses.
