@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Preparing Data and Rre-trained model
 1. Download the required data.
-   * Download our smpliks_db from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing) 
+   * Download our smpliks_db from [Google Drive](https://drive.google.com/drive/folders/1bN0JRktxblY_WTm-cebFhLq7YfmqzqlT?usp=sharing) 
    * Download our smpliks_data from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
    * Download our pretrained model from [Google Drive](https://drive.google.com/drive/folders/1YFg712Dtl0fAdg3RzIciuNO9gPxudVbJ?usp=sharing)
    
