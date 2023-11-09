@@ -64,7 +64,7 @@ To evaluate our SI+AnalyIK(Twist removal) or SI+HybrIK, run:
 
 ```eval
 python eval_si_hybrik.py --cfg configs/config_eval.yaml
-python eval_si_analyik.py --cfg config/config_eval.yaml
+python eval_si_analyik.py --cfg configs/config_eval.yaml
 ```
 You can evaluate on different datasets by modifying:
 
