@@ -60,11 +60,11 @@ python train_pan.py --cfg configs/config_spine.yaml
 
 ## Evaluation
 
-To evaluate our SI+APR+AnalyIK or SI+APR+HybrIK, run:
+To evaluate our SI+AnalyIK(Twist removal) or SI+HybrIK, run:
 
 ```eval
-python eval_si_apr_hybrik.py --cfg configs/config_eval.yaml
-python eval_si_apr_analyik.py --cfg config/config_eval.yaml
+python eval_si_hybrik.py --cfg configs/config_eval.yaml
+python eval_si_analyik.py --cfg config/config_eval.yaml
 ```
 You can evaluate on different datasets by modifying:
 
@@ -80,8 +80,8 @@ Our model achieves the following performance:
 
 | Methods            |MPBE(AMASS)|MPJPE(AMASS)|MPVE(AMASS)|MPBE(3DPW)|MPJPE(3DPW)|MPVE(3DPW)|MPBE(AGORA)|MPJPE(AGORA)|MPVE(AGORA)|
 | -------------------|-----------|------------|-----------|----------|-----------|----------|-----------|------------|-----------|
-| SI+APR+AnalyIK     |   0.2mm   |     0.3mm  |    10.9mm |   0.0mm  |    0.2mm  |   14.2mm |    0.1mm  |     0.2mm  |   23.4mm  |            
-| SI+APR+HybrIK      |   0.2mm   |     1.0mm  |    6.6mm  |   0.0mm  |    0.3mm  |   10.5mm |    0.1mm  |     0.7mm  |   19.2mm  |  
+| SI+AnalyIK(Twist removal)     |   0.2mm   |     0.3mm  |    15.8mm |   0.0mm  |    0.2mm  |   14.2mm |    0.1mm  |     0.2mm  |   23.4mm  |            
+| SI+HybrIK                     |   0.2mm   |     0.3mm  |    6.3mm  |   0.0mm  |    0.2mm  |   6.5mm |    0.1mm  |     0.2mm  |   9.7mm  |  
 
 ## License
 By downloading and using this code you agree to the terms in the [LICENSE](LICENSE). Third-party datasets and software are subject to their respective licenses.
