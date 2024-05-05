@@ -17,8 +17,8 @@ pip install -r requirements.txt
 
 ## Preparing Data and Rre-trained model
 1. Download the required data.
-   * Download our data [SMPL] from [Google Drive](https://drive.google.com/drive/folders/1bN0JRktxblY_WTm-cebFhLq7YfmqzqlT?usp=sharing) 
-   * Download our data [SMPLX] from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
+   * Download our data [SMPL] from [Google Drive](https://drive.google.com/drive/folders/1Ek2LEyOYCjqah4ZTHWSBWxsG6OTpiz-I?usp=drive_link) 
+   * Download our data [SMPLX] from [Google Drive](https://drive.google.com/drive/folders/1FDOP-wUYLOBLtNDfvalDnz9KjBRpxNGx?usp=drive_link)
      
    
 2. You need to follow directory structure of the `data` as below.
