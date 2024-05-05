@@ -17,71 +17,108 @@ pip install -r requirements.txt
 
 ## Preparing Data and Rre-trained model
 1. Download the required data.
-   * Download our smpliks_db from [Google Drive](https://drive.google.com/drive/folders/1bN0JRktxblY_WTm-cebFhLq7YfmqzqlT?usp=sharing) 
-   * Download our smpliks_data from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
-   * Download our pretrained model from [Google Drive](https://drive.google.com/drive/folders/1YFg712Dtl0fAdg3RzIciuNO9gPxudVbJ?usp=sharing)
+   * Download our data [SMPL] from [Google Drive](https://drive.google.com/drive/folders/1bN0JRktxblY_WTm-cebFhLq7YfmqzqlT?usp=sharing) 
+   * Download our data [SMPLX] from [Google Drive](https://drive.google.com/drive/folders/1CthuHIw6TjvRIdkuCEoWD0C_t1z8pfHm?usp=sharing)
+     
    
 2. You need to follow directory structure of the `data` as below.
 ```
 |-- data
-`-- |-- smpliks_db
-    `-- |-- amass_train_db.pt
-        `-- amss_test_db.pt
-        `-- 3dpw_test_db.pt
-        `-- agora_test_db.pt
-`-- |-- smpliks_data
-    `-- |-- SMPL_NEUTRAL.pkl
-        `-- smpl_kid_template.npy
-        `-- skeleton_2_beta_kid.npz
-`-- |-- pretrained_model
-    `-- |-- spine
-        `-- |-- model_best.pth.tar
-    `-- |-- leg
-        `-- |-- model_best.pth.tar
-    `-- |-- arm
-        `-- |-- model_best.pth.tar
+    `-- |-- smpl  
+        `-- |-- smpliks_db
+            `-- |-- amass_train_db.pt
+            `-- |-- amss_test_db.pt
+            `-- |-- 3dpw_test_db.pt
+            `-- |-- agora_test_db.pt
+        `-- |-- smpliks_data
+            `-- |-- SMPL_NEUTRAL.pkl
+            `-- |-- smpl_kid_template.npy
+            `-- |-- skeleton_2_beta_smpl.npz
+        `-- |-- pretrained_model
+            `-- |-- model_best.pth.tar
+    `-- |-- smplx  
+        `-- |-- smpxliks_db
+            `-- |-- amass_train_db.pt
+            `-- |-- amss_test_db.pt
+            `-- |-- motionx_test_db.pt
+            `-- |-- agora_test_db.pt
+        `-- |-- smplxiks_data
+            `-- |-- SMPLX_NEUTRAL.npz
+            `-- |-- smplx_kid_template.npy
+            `-- |-- skeleton_2_beta_smplx.npz
+        `-- |-- pretrained_model
+            `-- |-- model_best.pth.tar
 ```
-3. You need to modify the ROOT_PATH:
+3. You need to modify the [ROOT_PATH]:
 ```setup
-#1. vim lib/core/config.py
-
-#2. you should modify the ROOT_PATH = <Your path>
+For SMPL
+  #1. vim lib/core/smpl/config.py
+  #2. you should modify the ROOT_PATH = <Your path>
 ```
-
+```setup
+For SMPLX
+  #1. vim lib/core/smplx/config.py
+  #2. you should modify the ROOT_PATH = <Your path>
+```
 ## Training
 
-To train our Part-aware Network in the paper, run this command:
+To train our Part-aware Network (PAN) in the paper, run this command:
 
 ```train
-python train_pan.py --cfg configs/config_leg.yaml
-python train_pan.py --cfg configs/config_arm.yaml
-python train_pan.py --cfg configs/config_spine.yaml
+For SMPL
+  python train_smpl.py --cfg configs/smpl/config_train.yaml
 ```
-
+```train
+For SMPLX
+  python train_smplx.py --cfg configs/smplx/config_train.yaml
+```
 ## Evaluation
 
-To evaluate our SI+AnalyIK(Twist removal) or SI+HybrIK, run:
+To evaluate our SI+PR-C+AnalyIK(Twist removal) or SI+PR-C+HybrIK, run:
 
 ```eval
-python eval_si_hybrik.py --cfg configs/config_eval.yaml
-python eval_si_analyik.py --cfg configs/config_eval.yaml
+For SMPL
+python eval_smpl.py --cfg configs/smpl/config_eval.yaml
 ```
+
+```eval
+For SMPLX
+python eval_smplx.py --cfg configs/smplx/config_eval.yaml
+```
+
 You can evaluate on different datasets by modifying:
 
 ```eval
-#1. vim configs/config_eval.yaml
-#2. you should modify the DATASET_EVAL: 'AGORA' or 'AMASS' or 'ThreeDPW'
+For SMPL
+  #1. vim configs/smpl/config_eval.yaml
+  #2. you should modify the DATASET_EVAL: 'AGORA' or 'AMASS' or 'ThreeDPW'
 ```
 
+```eval
+For SMPLX
+  #1. vim configs/smplx/config_eval.yaml
+  #2. you should modify the DATASET_EVAL: 'AGORA' or 'AMASS' or 'MOTIONX'
+```
 
 ## Results
 
 Our model achieves the following performance:
 
+For SMPL
+
 | Methods            |MPBE(AMASS)|MPJPE(AMASS)|MPVE(AMASS)|MPBE(3DPW)|MPJPE(3DPW)|MPVE(3DPW)|MPBE(AGORA)|MPJPE(AGORA)|MPVE(AGORA)|
 | -------------------|-----------|------------|-----------|----------|-----------|----------|-----------|------------|-----------|
-| SI+AnalyIK(Twist removal)     |   0.2mm   |     0.3mm  |    15.8mm |   0.0mm  |    0.2mm  |   14.2mm |    0.1mm  |     0.2mm  |   23.4mm  |            
-| SI+HybrIK                     |   0.2mm   |     0.3mm  |    6.3mm  |   0.0mm  |    0.2mm  |   6.5mm |    0.1mm  |     0.2mm  |   9.7mm  |  
+| SI+PR-C+AnalyIK(Twist removal)   |   0.1mm  |     0.3mm |    15.7mm |   0.0mm  |    0.2mm  |   14.2mm |    0.1mm  |     0.2mm  |   23.8mm  |            
+| SI+PR-C+HybrIK                   |   0.1mm  |     0.3mm |    11.4mm  |   0.0mm |    0.2mm  |   10.9mm |    0.1mm  |     0.2mm  |   19.2mm  |  
+
+
+For SMPLX
+
+| Methods            |MPBE(AMASS)|MPJPE(AMASS)|MPVE(AMASS)|MPBE(MOTIONX)|MPJPE(MOTIONX)|MPVE(3DPW)|MPBE(AGORA)|MPJPE(AGORA)|MPVE(AGORA)|
+| -------------------|-----------|------------|-----------|----------|-----------|----------|-----------|------------|-----------|
+| SI+PR-C+AnalyIK(Twist removal)     |   0.3mm   |     0.5mm  |    16.9mm |   0.3mm  |    0.5mm  |   15.6mm |    0.3mm  |     0.5mm  |   16.8mm  |            
+| SI+PR-C+HybrIK                     |   0.3mm   |     0.5mm  |    13.7mm  |   0.3mm  |    0.5mm  |   13.6mm |    0.3mm  |     0.5mm  |   14.1mm  |  
+
 
 ## License
 By downloading and using this code you agree to the terms in the [LICENSE](LICENSE). Third-party datasets and software are subject to their respective licenses.
