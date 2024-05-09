@@ -8,11 +8,11 @@ To install requirements:
 
 ```setup
 #1. Create a conda virtual environment.
-conda create -n smpliks python=3.6.10
-conda activate smpliks
+  conda create -n smpliks python=3.6.10
+  conda activate smpliks
 
 #2. Install requirements.
-pip install -r requirements.txt
+  pip install -r requirements.txt
 ```
 
 ## Preparing Data and Rre-trained model
