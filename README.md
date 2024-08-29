@@ -74,7 +74,7 @@ For SMPLX
 ```
 ## Evaluation
 
-To evaluate our SI+PR-C+AnalyIK(Twist removal) or SI+PR-C+HybrIK, run:
+To evaluate our SI+PR-C+AnalyIK(Twist removal) or SI+PR-C+MixIK, run:
 
 ```eval
 For SMPL
@@ -109,7 +109,7 @@ For SMPL
 | Methods            |MPBE(AMASS)|MPJPE(AMASS)|MPVE(AMASS)|MPBE(3DPW)|MPJPE(3DPW)|MPVE(3DPW)|MPBE(AGORA)|MPJPE(AGORA)|MPVE(AGORA)|
 | -------------------|-----------|------------|-----------|----------|-----------|----------|-----------|------------|-----------|
 | SI+PR-C+AnalyIK(Twist removal)   |   0.1mm  |     0.3mm |    15.7mm |   0.0mm  |    0.2mm  |   14.2mm |    0.1mm  |     0.2mm  |   23.8mm  |            
-| SI+PR-C+HybrIK                   |   0.1mm  |     0.3mm |    11.6mm  |   0.0mm |    0.2mm  |   10.8mm |    0.1mm  |     0.2mm  |   19.4mm  |  
+| SI+PR-C+MixIK                   |   0.1mm  |     0.3mm |    11.6mm  |   0.0mm |    0.2mm  |   10.8mm |    0.1mm  |     0.2mm  |   19.4mm  |  
 
 
 For SMPLX
@@ -117,7 +117,7 @@ For SMPLX
 | Methods            |MPBE(AMASS)|MPJPE(AMASS)|MPVE(AMASS)|MPBE(MOTIONX)|MPJPE(MOTIONX)|MPVE(3DPW)|MPBE(AGORA)|MPJPE(AGORA)|MPVE(AGORA)|
 | -------------------|-----------|------------|-----------|----------|-----------|----------|-----------|------------|-----------|
 | SI+PR-C+AnalyIK(Twist removal)     |   0.3mm   |     0.5mm  |    16.9mm |   0.3mm  |    0.5mm  |   15.6mm |    0.3mm  |     0.5mm  |   16.8mm  |            
-| SI+PR-C+HybrIK                     |   0.3mm   |     0.5mm  |    13.9mm  |   0.3mm  |    0.5mm  |   14.4mm |    0.3mm  |     0.5mm  |   13.9mm  |  
+| SI+PR-C+MixIK                     |   0.3mm   |     0.5mm  |    13.9mm  |   0.3mm  |    0.5mm  |   14.4mm |    0.3mm  |     0.5mm  |   13.9mm  |  
 
 
 ## License
