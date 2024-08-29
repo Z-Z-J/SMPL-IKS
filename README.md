@@ -1,6 +1,6 @@
-# SMPL-IKS: An Inverse Kinematic Solver for 3D Human Body Recovery
+# SMPL-IKS: An Inverse Kinematic Solver for 3D Human Mesh Recovery
 
-This repository is the official implementation of [SMPL-IKS: An Inverse Kinematic Solver for 3D Human Body Recovery]. 
+This repository is the official implementation of [SMPL-IKS: An Inverse Kinematic Solver for 3D Human Mesh Recovery]. 
 
 ## Requirements
 
