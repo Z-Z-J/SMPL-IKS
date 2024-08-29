@@ -2,13 +2,11 @@
 
 This repository is the official implementation of [SMPL-IKS: An Inverse Kinematic Solver for 3D Human Mesh Recovery]. 
 
-## Key idea: Inverse Kinematics
-
-HybrIK and HybrIK-X are based on a hybrid inverse kinematics (IK) to convert accurate 3D keypoints to parametric body meshes.
+## Key idea: Shape Inverse + Pose Refinement + Inverse Kinematics
 
 <div align="center">
-    <img src="assets/smpl-iks.png", width="600" alt><br>
-    Twist-and-Swing Decomposition
+    <img src="assets/smpl-iks.png", width="1200" alt><br>
+    3D Skeleton-to-Mesh
 </div>
 
 ## Requirements
