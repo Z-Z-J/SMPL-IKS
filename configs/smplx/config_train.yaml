@@ -1,0 +1,30 @@
+DEVICE: 'cuda'
+EXP_NAME: 'smplxiks'
+OUTPUT_DIR: 'results/smplxiks-d256-s3-part'
+NUM_WORKERS: 8
+SEED_VALUE: 1
+DATASET:
+  SEQLEN: 1
+  OVERLAP: 0.0 
+LOSS:
+  PHI_W: 1.0
+  THETA_W: 0.0
+  VERT_W: 1.0
+TRAIN:
+  BATCH_SIZE: 1024
+  START_EPOCH: 0
+  END_EPOCH: 30
+  LR_PATIENCE: 3
+
+  DATASETS_3D: 
+    - 'AMASS'
+  
+  DATASET_EVAL: 'AMASS'
+  GEN_LR: 0.0001
+  GEN_WD: 0.1
+  
+MODEL:
+  TEMPORAL_TYPE: 'mlp'
+  MLP:
+    EMBED_DIM: 256
+    
